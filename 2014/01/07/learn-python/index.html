@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head prefix="og: https://ogp.me/ns#"><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  <title>Python笔记 | Ant-Home</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Canonical links -->
+  <link rel="canonical" href="https://ant-sir.xyz/2014/01/07/learn-python/index.html">
+  
+  <!-- Alternative links -->
+  
+  <!-- Icon -->
+  <link rel="apple-touch-icon" sizes="57x57" href="/icon/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/icon/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/icon/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/icon/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/icon/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/icon/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/icon/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/icon/apple-touch-icon-152x152.png">
+  <link rel="icon" type="image/png" href="/icon/favicon-196x196.png" sizes="196x196">
+  <link rel="icon" type="image/png" href="/icon/favicon-160x160.png" sizes="160x160">
+  <link rel="icon" type="image/png" href="/icon/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/png" href="/icon/favicon-16x16.png" sizes="16x16">
+  <link rel="icon" type="image/png" href="/icon/favicon-32x32.png" sizes="32x32">
+  <meta name="msapplication-TileColor" content="#2f83cd">
+  <meta name="msapplication-TileImage" content="/icon/mstile-144x144.png">
+  <!-- CSS -->
+  <!-- build:css build/css/navy.css -->
+  <link rel="stylesheet" href="/css/navy.css">
+  <!-- endbuild -->
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
+  <!-- Google Analytics -->
+  
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-61377615-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+  <!-- Baidu auto push -->
+  <script>
+  (function(){
+      var bp = document.createElement('script');
+      bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+  })();
+  </script>
+</head>
+
+<body>
+  <div id="container">
+    <header id="header" class="wrapper">
+  <div id="header-inner" class="inner">
+    <h1 id="logo-wrap">
+      <a href="/" id="logo">Hexo</a>
+    </h1>
+    <nav id="main-nav">
+      <a href="/" class="main-nav-link">主页</a><a href="/categories/" class="main-nav-link">分类</a><a href="/archives/" class="main-nav-link">归档</a><a href="/about/" class="main-nav-link">关于</a>
+      <a href="https://github.com/ant-sir/site" class="main-nav-link"><i class="fa fa-github-alt"></i></a>
+      <div id="search-input-wrap">
+        <div id="search-input-icon">
+          <i class="fa fa-search"></i>
+        </div>
+        <input type="search" id="search-input" placeholder="Search...">
+      </div>
+    </nav>
+    <div id="lang-select-wrap">
+      <label id="lang-select-label"><i class="fa fa-globe"></i><span>简体中文</span></label>
+      <select id="lang-select" data-canonical="">
+        
+          <option value="zh-cn" selected>简体中文</option>
+        
+          <option value="en">English</option>
+        
+      </select>
+    </div>
+    <a id="mobile-nav-toggle">
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+    </a>
+  </div>
+</header>
+
+    <div id="content-wrap">
+  <div id="content" class="wrapper">
+    <div id="content-inner">
+      <article class="article-container" itemscope itemtype="https://schema.org/Article">
+        <div class="article-inner">
+          <div class="article">
+            <div class="inner">
+              <header class="article-header">
+                <h1 class="article-title" itemprop="name">Python笔记</h1>
+                <a href="https://github.com/ant-sir/site/edit/master/source/_posts/2014-01-07-learn-python.md" class="article-edit-link" title="改进本文"><i class="fa fa-pencil"></i></a>
+              </header>
+              <div class="article-content" itemprop="articleBody">
+                <p>这里主要记录一些Python的读书笔记，以及在使用Python中的一些经验总结。记录一下，以方便忘记的时候查阅。<br><a id="more"></a></p>
+<h2 id="UNIX-env查找" class="article-heading"><a href="#UNIX-env查找" class="headerlink" title="UNIX env查找"></a>UNIX env查找<a class="article-anchor" href="#UNIX-env查找" aria-hidden="true"></a></h2><p>在类UNIX系统上写脚本时，一般脚本的“hash bang”可以使用env来加载解释器，这样就可以提高脚本的通用性。</p>
+<h2 id="可变与不可变" class="article-heading"><a href="#可变与不可变" class="headerlink" title="可变与不可变"></a>可变与不可变<a class="article-anchor" href="#可变与不可变" aria-hidden="true"></a></h2><p>Python的所有基本数据类型都区分可变与不可变，区分这一点很重要，因为Python里很多类型都需要索引，只有不可变类型才是可Hash的，才能做为键或者值。</p>
+<h2 id="关键定参数与默认值参数" class="article-heading"><a href="#关键定参数与默认值参数" class="headerlink" title="关键定参数与默认值参数"></a>关键定参数与默认值参数<a class="article-anchor" href="#关键定参数与默认值参数" aria-hidden="true"></a></h2><p><code>name=vlane</code>的形式在定义和调用中是不同的。在定义时表示定义的参数带默认值，在调用时表示以关键字参数进行传参。</p>
+<h2 id="keywork-only参数" class="article-heading"><a href="#keywork-only参数" class="headerlink" title="keywork-only参数"></a>keywork-only参数<a class="article-anchor" href="#keywork-only参数" aria-hidden="true"></a></h2><p>Python3.0之后可以指定keywork-only参数，keywork-only参数出现在<code>*args</code>或<code>*</code>之后，在调用中必须使用关键字语法来进行传递。如果只使用一个<code>*</code>，表示一个函数不会接受一个变量长度的参数列表，而只是期望跟在<code>*</code>后面的参数成为关键字参数。注意，仍然可以对关键字参数使用默认值。在调用时，没有指定默认值的关键字参数必须以关键字参数形式传参。在一个函数头部，keywork-only参数必须编写在<code>**args</code><strong>任意关键字形式</strong>之前，且在<code>*args</code><strong>任意位置形式</strong>之后。</p>
+<h2 id="完整的迭代协议" class="article-heading"><a href="#完整的迭代协议" class="headerlink" title="完整的迭代协议"></a>完整的迭代协议<a class="article-anchor" href="#完整的迭代协议" aria-hidden="true"></a></h2><p>完整的迭代协议基于两个对象，通过两步被迭代工具使用：</p>
+<ul>
+<li>通过<code>iter</code>调用<code>__iter__</code>产生迭代所需要的可迭代对象（迭代器）。</li>
+<li>由迭代器对象在迭代过程中产生实际的值，每次通过调用迭代器对象的<code>next</code>方法（<code>next</code>方法实际调用<code>__next__</code>）产生下一个值，并在结尾时产生<code>StopIterationwhen</code>异常。</li>
+</ul>
+<p>迭代工具在大多数情况下使用上面的两个步骤，但在迭代有些对象时第一个步骤被省略，因为这些对象是它们自身的迭代器（如文件对象）。</p>
+<h2 id="新的可迭代对象" class="article-heading"><a href="#新的可迭代对象" class="headerlink" title="新的可迭代对象"></a>新的可迭代对象<a class="article-anchor" href="#新的可迭代对象" aria-hidden="true"></a></h2><p>Python3.0中更强调迭代，除了文件、字典等内置类型相关的迭代，字典的方法keys, values, items都是可迭代的。另外内置函数range, map, zip, filter也都是可迭代的。</p>
+<h2 id="lambda表达式" class="article-heading"><a href="#lambda表达式" class="headerlink" title="lambda表达式"></a>lambda表达式<a class="article-anchor" href="#lambda表达式" aria-hidden="true"></a></h2><p>lambda表达式的一般形式：<br><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">lambda</span> argument1, argument2, ... argumentN :expression using arguments</span><br></pre></td></tr></table></figure></p>
+<p>lambda表达式与def函数的区别：</p>
+<ul>
+<li>lambda是一个表达式，而不是一个语句。</li>
+<li>lambda的主体是一个单个的表达式，而不是一个代码块。</li>
+</ul>
+<h2 id="在序列上映射函数-map" class="article-heading"><a href="#在序列上映射函数-map" class="headerlink" title="在序列上映射函数 map"></a>在序列上映射函数 map<a class="article-anchor" href="#在序列上映射函数-map" aria-hidden="true"></a></h2><p>map函数对序列对象上的每一个元素应用被传入的函数，并且返回了一个包含所有函数调用结果的一个列表。</p>
+<h2 id="静态方法与类方法" class="article-heading"><a href="#静态方法与类方法" class="headerlink" title="静态方法与类方法"></a>静态方法与类方法<a class="article-anchor" href="#静态方法与类方法" aria-hidden="true"></a></h2><ul>
+<li>在Python2.6中，从一个类获取一个方法会产生一个<strong>未绑定方法</strong>，没有手动传递一个实例就不让调用它。</li>
+<li>在Python3.0中，从一个类获取一个方法会产生一个 <strong>简单函数</strong> ，没有给出实例也可以调用它。<br>换句话说，Python2.6类方法总是要求传入一个实例，不管是通过一个实例或类调用它。相反Python3.0中，只有当一个方法期待实例的时候，我们才给它传入一个实例。结果是：</li>
+<li>在Python2.6中，我们必须总是把方法声明为静态的，从而不带一个实例去调用它，不管是通过一个实例或者一个类去调用它。</li>
+<li>在Python3.0中，如果方法只通过一个类调用的话，我们不需要将这样的方法声明为静态的，但是要通过实例来调用它，侧必须声明为静态的。</li>
+</ul>
+<h2 id="字符串变化" class="article-heading"><a href="#字符串变化" class="headerlink" title="字符串变化"></a>字符串变化<a class="article-anchor" href="#字符串变化" aria-hidden="true"></a></h2><h3 id="Python3-0的字符串类型变化" class="article-heading"><a href="#Python3-0的字符串类型变化" class="headerlink" title="Python3.0的字符串类型变化"></a>Python3.0的字符串类型变化<a class="article-anchor" href="#Python3-0的字符串类型变化" aria-hidden="true"></a></h3><p>Python 2.X有一种通用的字符串类型str来表示二进制数据和像ASCII这样的8位文本，还有一种特定的类型用来表示多字节Unicode文本：</p>
+<ul>
+<li>str表示8位文本和二进制数据</li>
+<li>unicode用来表示宽字符Unicode文本</li>
+</ul>
+<p>Python 3.X的字符默认使用Unicode字符，它用一种str表示所有的文本类型（ASCII也是一种Unicode字符），使用bytes与byteyarray表示二进制数据：</p>
+<ul>
+<li>str表示Unicode文本（8位的和更宽的）</li>
+<li>bytes表示二进制数据</li>
+<li>bytearray，是一种可变的bytes类型</li>
+</ul>
+<h3 id="编码与解码" class="article-heading"><a href="#编码与解码" class="headerlink" title="编码与解码"></a>编码与解码<a class="article-anchor" href="#编码与解码" aria-hidden="true"></a></h3><p>Python2.X中的str与Unicode可以自由混合，但Python3.X引入了一个更鲜明的区分——str和bytes类型对象不能在表达式中自动地混合，并且当传递给函数的时候不会自动地相互转换。期待一个str对象作为参数的函数，通常不能接受一个bytes；反之亦然。</p>
+<p>因此，Python3.X基本上要求遵守一种类型或另一种类型，或者手动执行显式转换：</p>
+<ul>
+<li><code>str.encode()</code>和<code>bytes(S, encoding)</code>把一个字符串转换为其raw bytes形式，并且在此过程中根据一个str创建一个bytes。</li>
+<li><code>bytes.decode()</code>和<code>str(B, encoding)</code>把raw bytes转换为其字符串形式，并且在此过程中根据一个bytes创建一个str。<br>encode和decode方法针对你的平台使用一个默认编码，或者一个显式传入的编码名。</li>
+</ul>
+<p>注意：<br>在使用bytes编码一个字符串时，它的第二个参数（encoding）不是可选的，在编码一个字符串时你必须手动指定编码格式。<br>但使用str解码一个raw bytes串时，它的第二个参数（encoding）就可选的，但省略该参数并不意味着取平台默认值。相反，不带编码的str调用返回对象的打印字符串，而不是其解码后的形式，这并不是我们想要的。</p>
+<h3 id="源文件字符集编码声明" class="article-heading"><a href="#源文件字符集编码声明" class="headerlink" title="源文件字符集编码声明"></a>源文件字符集编码声明<a class="article-anchor" href="#源文件字符集编码声明" aria-hidden="true"></a></h3><p>Python默认地使用UTF-8编码，但是，它允许我们通过包含一个注释来指明想要的编码，从而将默认值修改为支持任意的字符集。这个注释必须拥有如下的形式，并且在Python 2.6或Python 3.0中必须作为脚本的第一行或第二行出现：<br><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># -*- coding: latin-1 -*-</span></span><br></pre></td></tr></table></figure></p>
+<h2 id="管理属性" class="article-heading"><a href="#管理属性" class="headerlink" title="管理属性"></a>管理属性<a class="article-anchor" href="#管理属性" aria-hidden="true"></a></h2><ul>
+<li><code>__getattr__</code>和<code>__setattr__</code>方法，把未定义的属性获取和所有的属性赋值指向通用的处理器方法。</li>
+<li><code>__getattribute__</code>方法，把所有属性获取都指向Python 2.6的新式类和Python 3.0的所有类中的一个泛型处理器方法。</li>
+<li><code>property</code>内置函数，把特定属性访问定位到get和set处理器函数，也叫做特性（Property）。</li>
+<li>描述符协议，把特定属性访问定位到具有任意get和set处理器方法的类的实例。</li>
+</ul>
+<p>可以通过把一个内置函数的结果赋给一个<strong>类属性</strong>来创建一个特性：<br><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">attribute = property(fget, fset, fdel, doc)</span><br></pre></td></tr></table></figure></p>
+<p>property对象有getter、setter和deleter方法，这些方法指定相应的特性访问器方法赋值并且返回特性自身的一个副本。我们也可以使用这些方法，通过装饰常规方法来指定特性的组成部分。如果没有指定对应的方法则表示不支持该方法对应的操作。</p>
+<p>描述符作为独立的类创建，并且它们就像方法函数一样分配给<strong>类属性</strong>。和任何其他的类属性一样，它们可以通过子类和实例继承：<br><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Descriptor</span>:</span></span><br><span class="line"><span class="string">"docstring goes here"</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">__get__</span><span class="params">(self, instance, owner)</span>:</span> ...   <span class="comment"># Return attr value</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">__set__</span><span class="params">(self, instance, value)</span>:</span> ...   <span class="comment"># Return nothing (None)</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">__delete__</span><span class="params">(self, instance)</span>:</span> ...   <span class="comment"># Return nothing (None)</span></span><br></pre></td></tr></table></figure></p>
+<p>带有任何这些方法的类都可以看作是描述符，并且当它们的一个实例分配给另一个类的属性的时候，它们的这些方法是特殊的——当访问属性的时候，会自动调用它们。如果这些方法中的任何一个空缺，通常意味着不支持相应类型的访问。然而，和特性不同，省略一个<code>__set__</code>意味着允许这个名字在一个实例中重新定义，因此，隐藏了描述符——要使得一个属性是只读的，我们必须定义<code>__set__</code>来捕获赋值并引发一个异常。</p>
+<p>属性获取拦截表现为两种形式，可用两个不同的方法来编写：</p>
+<ul>
+<li><code>__getattr__</code>针对未定义的属性运行——也就是说，属性没有存储在实例上，或者没有从其类之一继承。</li>
+<li><code>__getattribute__</code>针对每个属性，因此，当使用它的时候，必须小心避免通过把属性访问传递给超类而导致递归循环。</li>
+</ul>
+<p>这两个方法是一组属性拦截方法的代表，这些方法还包括<code>__setattr__</code>和<code>__delattr__</code>。由于这些方法具有相同的作用，注意，<code>__setattr__</code>和<code>__delattr__</code>对所有的属性产生作用，而不像<code>__getattr__</code>只拦截未定义的属性。</p>
+<p>这些方法通常都容易使用，它们唯一复杂的部分就是潜在的循环（即递归）。由于<code>__getattr__</code>仅针对未定义的属性调用，所以它可以在自己的代码中自由地获取其他属性。然而，由于<code>__getattribute__</code>和<code>__setattr__</code>针对所有的属性运行，因此，它们的代码要注意在访问其他属性的时候避免再次调用自己并触发一次递归循环。</p>
+<p>例如，在一个<code>__getattribute__</code>方法代码内部的另一次属性获取，将会再次触发<code>__getattribute__</code>，并且代码将会循环直到内存耗尽：<br><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">__getattribute__</span><span class="params">(self, name)</span>:</span></span><br><span class="line">    x = self.other         <span class="comment"># LOOPS!</span></span><br></pre></td></tr></table></figure></p>
+<p>要解决这个问题，把获取指向一个更高的超类，而不是跳过这个层级的版本——object类总是一个超类，并且它在这里可以很好地起作用:<br><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">__getattribute__</span><span class="params">(self, name)</span>:</span></span><br><span class="line">    x = object.__getattribute__(self, <span class="string">'other'</span>)    <span class="comment"># Force higher to avoid me</span></span><br></pre></td></tr></table></figure></p>
+<p>对于<code>__setattr__</code>，情况是类似的。在这个方法内赋值任何属性，都会再次触发<code>__setattr__</code>并创建一个类似的循环：<br><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">__setattr__</span><span class="params">(self, name, value)</span>:</span></span><br><span class="line">    self.other = value         <span class="comment"># LOOPS!</span></span><br></pre></td></tr></table></figure></p>
+<p>要解决这个问题，把属性作为实例的<code>__dict__</code>命名空间字典中的一个键赋值。这样就避免了直接的属性赋值：<br><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">__setattr__</span><span class="params">(self, name, value)</span>:</span></span><br><span class="line">    self.__dict__[<span class="string">'other'</span>] = value       <span class="comment"># Use atttr dict to avoid me</span></span><br></pre></td></tr></table></figure></p>
+<p>尽管这种方法比较少用到，但<code>__setattr__</code>也可以把自己的属性赋值传递给一个更高的超类而避免循环，就像<code>__getattribute__</code>一样：<br><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">__setattr__</span><span class="params">(self, name, value)</span>:</span></span><br><span class="line">    object.__setattr__(self, <span class="string">'other'</span>, value)     <span class="comment"># Force higher to avoid me</span></span><br></pre></td></tr></table></figure></p>
+<p>相反，我们不能使用<code>__dict__</code>技巧在<code>__getattribute__</code>中避免循环：<br><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">__getattribute__</span><span class="params">(self, name)</span>:</span></span><br><span class="line">    x = self.__dict__[<span class="string">'other'</span>]       <span class="comment"># LOOPS!</span></span><br></pre></td></tr></table></figure></p>
+<p>获取<code>__dict__</code>属性本身会再次触发<code>__getattribute__</code>，导致一个递归循环。很奇怪，但确实如此。</p>
+<h3 id="拦截内置操作属性" class="article-heading"><a href="#拦截内置操作属性" class="headerlink" title="拦截内置操作属性"></a>拦截内置操作属性<a class="article-anchor" href="#拦截内置操作属性" aria-hidden="true"></a></h3><p>在介绍<code>__getattr__</code>和<code>__getattribute__</code>的时候，我说它们分别拦截未定义的以及所有的属性获取，这使得它们很适合用于基于委托的编码模式。尽管对于常规命名的属性来说是这样，但它们的行为需要一些额外的澄清：对于隐式地使用内置操作获取的方法名属性，这些方法可能根本不会运行。</p>
+<p>例如，针对<code>__str__</code>、<code>__add__</code>和<code>__getitem__</code>方法的属性获取分别通过打印、+表达式和索引隐式地运行，而不会指向Python 3.0中的类属性拦截方法。特别是：</p>
+<ul>
+<li>在Python 3.0中，<code>__getattr__</code>和<code>__getattribute__</code>都不会针对这样的属性而运行。</li>
+<li>在Python 2.6中，如果属性在类中未定义的话，<code>__getattr__</code>会针对这样的属性运行。</li>
+<li>在Python 2.6中，<code>__getattribute__</code>只对于新式类可用，并且在Python 3.0中也可以使用。</li>
+</ul>
+<p>换句话说，在Python 3.0的类中（以及Python 2.6的新式类中），没有直接的方法来通用地拦截像打印和加法这样的内置操作。在Python 2.X中，这样的操作调用的方法在运行时从实例中查找，就像所有其他属性一样；在Python 3.0中，这样的方法在类中查找。</p>
+
+              </div>
+              <footer class="article-footer">
+                <time class="article-footer-updated" datetime="2019-03-17T05:08:40.343Z" itemprop="dateModified">上次更新：2019-03-17</time>
+                <a href="/categories/" class="article-footer-prev" title="欢迎"><i class="fa fa-chevron-left"></i><span>上一页</span></a><a href="/2013/05/05/learn-git/" class="article-footer-next" title="Git学习笔记"><span>下一页</span><i class="fa fa-chevron-right"></i></a>
+              </footer>
+              
+<section id="comments">
+  <div id="disqus_thread"></div>
+</section>
+<script>
+  var disqus_shortname = 'antsir';
+  var disqus_url = 'https://ant-sir.xyz/2014/01/07/learn-python/index.html';
+  var disqus_title = "Python笔记";
+  var disqus_config = function(){
+    this.language = 'zh';
+  };
+  (function(){
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = 'https://go.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+            </div>
+          </div>
+          <aside id="article-toc" role="navigation">
+            <div id="article-toc-inner">
+              <strong class="sidebar-title">目录</strong>
+              <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#UNIX-env查找"><span class="toc-text">UNIX env查找</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#可变与不可变"><span class="toc-text">可变与不可变</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#关键定参数与默认值参数"><span class="toc-text">关键定参数与默认值参数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#keywork-only参数"><span class="toc-text">keywork-only参数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#完整的迭代协议"><span class="toc-text">完整的迭代协议</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#新的可迭代对象"><span class="toc-text">新的可迭代对象</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#lambda表达式"><span class="toc-text">lambda表达式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#在序列上映射函数-map"><span class="toc-text">在序列上映射函数 map</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#静态方法与类方法"><span class="toc-text">静态方法与类方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#字符串变化"><span class="toc-text">字符串变化</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Python3-0的字符串类型变化"><span class="toc-text">Python3.0的字符串类型变化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#编码与解码"><span class="toc-text">编码与解码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#源文件字符集编码声明"><span class="toc-text">源文件字符集编码声明</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#管理属性"><span class="toc-text">管理属性</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#拦截内置操作属性"><span class="toc-text">拦截内置操作属性</span></a></li></ol></li></ol>
+              <a href="#" id="article-toc-top">回到顶部</a>
+            </div>
+          </aside>
+        </div>
+      </article>
+      <aside id="sidebar" role="navigation">
+  <div class="inner">
+    <strong class="sidebar-title">欢迎</strong><a href="/categories" class="sidebar-link">欢迎</a><strong class="sidebar-title">学习笔记</strong><a href="/2014/01/07/learn-python/" class="sidebar-link current">Python笔记</a><strong class="sidebar-title">工具使用</strong><a href="/2013/05/05/learn-git/" class="sidebar-link">Git学习笔记</a><a href="/2013/08/07/cmake-usage/" class="sidebar-link">CMAKE使用</a><a href="/2013/07/03/google-repo/" class="sidebar-link">Google Repo</a>
+    <strong class="sidebar-title">PYTHON</strong><a href="/2014/01/07/learn-python/" class="sidebar-link current">Python笔记</a><strong class="sidebar-title">GIT</strong><a href="/2013/05/05/learn-git/" class="sidebar-link">Git学习笔记</a><strong class="sidebar-title">CMAKE</strong><a href="/2013/08/07/cmake-usage/" class="sidebar-link">CMAKE使用</a><strong class="sidebar-title">REPO</strong><a href="/2013/07/03/google-repo/" class="sidebar-link">Google Repo</a>
+ </div>
+</aside>
+
+    </div>
+  </div>
+</div>
+
+    <footer id="footer" class="wrapper">
+  <div class="inner">
+    <div id="footer-copyright">
+      &copy; 2019 <a href="https://ant-sir.xyz" target="_blank">Zhu Yanlei</a><br>
+      Documentation licensed under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a>.
+    </div>
+    <div id="footer-links">
+      <a href="https://weibo.com/5301170870" class="footer-link" target="_blank"><i class="fa fa-weibo"></i></a>
+      <a href="https://github.com/ant-sir/site" class="footer-link" target="_blank"> <i class="fa fa-weixin" aria-hidden="true"></i></a>
+      <a href="https://github.com/ant-sir/site" class="footer-link" target="_blank"> <i class="fa fa-qq" aria-hidden="true"></i></a>
+      <a href="https://github.com/ant-sir/site" class="footer-link" target="_blank"><i class="fa fa-github-alt"></i></a>
+    </div>
+  </div>
+</footer>
+
+  </div>
+  <div id="mobile-nav-dimmer"></div>
+  <nav id="mobile-nav">
+  <div id="mobile-nav-inner">
+    <ul id="mobile-nav-list">
+      <a href="/" class="mobile-nav-link">主页</a><a href="/categories/" class="mobile-nav-link">分类</a><a href="/archives/" class="mobile-nav-link">归档</a><a href="/about/" class="mobile-nav-link">关于</a>
+      <li class="mobile-nav-item">
+        <a href="https://github.com/ant-sir/site" class="mobile-nav-link" rel="external" target="_blank">GitHub</a>
+      </li>
+    </ul>
+    
+      <strong class="mobile-nav-title">欢迎</strong><a href="/categories" class="mobile-nav-link">欢迎</a><strong class="mobile-nav-title">学习笔记</strong><a href="/2014/01/07/learn-python/" class="mobile-nav-link current">Python笔记</a><strong class="mobile-nav-title">工具使用</strong><a href="/2013/05/05/learn-git/" class="mobile-nav-link">Git学习笔记</a><a href="/2013/08/07/cmake-usage/" class="mobile-nav-link">CMAKE使用</a><a href="/2013/07/03/google-repo/" class="mobile-nav-link">Google Repo</a>
+      <strong class="mobile-nav-title">PYTHON</strong><a href="/2014/01/07/learn-python/" class="mobile-nav-link current">Python笔记</a><strong class="mobile-nav-title">GIT</strong><a href="/2013/05/05/learn-git/" class="mobile-nav-link">Git学习笔记</a><strong class="mobile-nav-title">CMAKE</strong><a href="/2013/08/07/cmake-usage/" class="mobile-nav-link">CMAKE使用</a><strong class="mobile-nav-title">REPO</strong><a href="/2013/07/03/google-repo/" class="mobile-nav-link">Google Repo</a>
+    
+  </div>
+  <div id="mobile-lang-select-wrap">
+    <span id="mobile-lang-select-label"><i class="fa fa-globe"></i><span>简体中文</span></span>
+    <select id="mobile-lang-select" data-canonical="">
+      
+        <option value="zh-cn" selected>简体中文</option>
+      
+        <option value="en">English</option>
+      
+    </select>
+  </div>
+</nav>
+  <!-- Scripts -->
+<!-- Cookie -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.2.0/js.cookie.min.js"></script>
+<!-- build:js build/js/main.js -->
+<script src="/js/lang_select.js"></script>
+<script src="/js/toc.js"></script>
+<script src="/js/mobile_nav.js"></script>
+<!-- endbuild -->
+<!-- Algolia -->
+
+<script>document.getElementById('search-input-wrap').classList.add('on');</script>
+<script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+<script>
+  docsearch({
+    // Your apiKey and indexName will be given to you once
+    // we create your config
+    apiKey: '36fb45dc14ef77aa8bdf5b2dbf75c87f',
+    indexName: 'hexo-search',
+    appId: 'IKDE0Z5WJI', // Should be only included if you are running DocSearch on your own.
+    // Replace inputSelector with a CSS selector
+    // matching your search input
+    inputSelector: '#search-input',
+    // Set debug to true if you want to inspect the dropdown
+    debug: false,
+  });
+</script>
+
+
+</body>
+</html>

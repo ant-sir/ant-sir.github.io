@@ -1,0 +1,4 @@
+https://ant-sir.xyz/2014/01/07/learn-python/
+https://ant-sir.xyz/2013/08/07/cmake-usage/
+https://ant-sir.xyz/2013/07/03/google-repo/
+https://ant-sir.xyz/2013/05/05/learn-git/
