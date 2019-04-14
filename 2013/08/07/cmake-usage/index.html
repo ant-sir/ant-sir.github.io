@@ -2,7 +2,7 @@
 <html lang="zh-cn">
 <head prefix="og: https://ogp.me/ns#"><meta name="generator" content="Hexo 3.8.0">
   <meta charset="utf-8">
-  <title>CMAKE使用 | Ant-Home</title>
+  <title>cmake学习笔记 | Ant-Home</title>
   <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Canonical links -->
@@ -103,12 +103,12 @@
           <div class="article">
             <div class="inner">
               <header class="article-header">
-                <h1 class="article-title" itemprop="name">CMAKE使用</h1>
+                <h1 class="article-title" itemprop="name">cmake学习笔记</h1>
                 <a href="https://github.com/ant-sir/site/edit/master/source/_posts/2013-08-07-cmake-usage.md" class="article-edit-link" title="改进本文"><i class="fa fa-pencil"></i></a>
               </header>
               <div class="article-content" itemprop="articleBody">
-                <p>使用CMake很简单，通过在每个目录下创建一个或多个CMakeLists文件来编译进程处理整个项目。CMakeLists文件包含CMake语言对项目的描述，CMake语言由一系列的命令组成。<br><a id="more"></a></p>
-<p>这些命令的形式如下：<br><figure class="highlight cmake"><table><tr><td class="code"><pre><span class="line"><span class="keyword">command</span> (args...)</span><br></pre></td></tr></table></figure></p>
+                <p>cmake是一个相对更高级一点的编译系统。它类似qmake，有比gnu make更简洁易懂的语法。<br><a id="more"></a></p>
+<p>使用CMake很简单，通过在每个目录下创建一个或多个CMakeLists文件来编译进程处理整个项目。CMakeLists文件包含CMake语言对项目的描述，CMake语言由一系列的命令组成。<br>这些命令的形式如下：<br><figure class="highlight cmake"><table><tr><td class="code"><pre><span class="line"><span class="keyword">command</span> (args...)</span><br></pre></td></tr></table></figure></p>
 <p>其中<code>command</code>是命令的名字，<code>args</code>是使用空格或分号分隔的参数列表。CMake命令从2.2开始是不区分大小写，因此你可以使用<code>COMMAND</code>来代替<code>command</code>，或者使用<code>Command</code>。</p>
 <p>CMake有非常详细的说明<a href="https://cmake.org/cmake/help/latest/" target="_blank" rel="noopener">文档</a>，如果你想了解哪条命令的详细信息，可以直接查看官方文档。</p>
 <h2 id="CMake变量" class="article-heading"><a href="#CMake变量" class="headerlink" title="CMake变量"></a>CMake变量<a class="article-anchor" href="#CMake变量" aria-hidden="true"></a></h2><p>CMake的变量可以赋字符串或者字符串列表，变量是通过<code>${VAR}</code>方式引用的。使用set命令可以给变量赋值，多个空格分隔的参数被当做一个列表被赋给变量，如：<code>set(Foo a b c)</code>将会把<code>a b c</code>赋给Foo，并且如果Foo作为另一个命令的参数<code>command(${Foo})</code>它等效于<code>command(a b c)</code>。如果你想传一个列表给命令作为一个单独的参数，你需要用双引号括起来。如<code>command(&quot;${Foo}&quot;)</code>，将会被解引用为只有一个字符串参数<code>set(&quot;Foo a b c&quot;)</code>。</p>
@@ -242,8 +242,8 @@
 
               </div>
               <footer class="article-footer">
-                <time class="article-footer-updated" datetime="2019-04-08T14:24:49.342Z" itemprop="dateModified">上次更新：2019-04-08</time>
-                <a href="/2013/05/05/learn-git/" class="article-footer-prev" title="Git学习笔记"><i class="fa fa-chevron-left"></i><span>上一页</span></a><a href="/2013/07/03/google-repo/" class="article-footer-next" title="Google Repo"><span>下一页</span><i class="fa fa-chevron-right"></i></a>
+                <time class="article-footer-updated" datetime="2019-04-14T15:29:51.098Z" itemprop="dateModified">上次更新：2019-04-14</time>
+                <a href="/2013/07/03/google-repo/" class="article-footer-prev" title="repo工具学习笔记"><i class="fa fa-chevron-left"></i><span>上一页</span></a><a href="/20134/02/03/repo-source/" class="article-footer-next" title="repo实现学习笔记"><span>下一页</span><i class="fa fa-chevron-right"></i></a>
               </footer>
               
 <section id="comments">
@@ -252,7 +252,7 @@
 <script>
   var disqus_shortname = 'antsir';
   var disqus_url = 'https://ant-sir.xyz/2013/08/07/cmake-usage/index.html';
-  var disqus_title = "CMAKE使用";
+  var disqus_title = "cmake学习笔记";
   var disqus_config = function(){
     this.language = 'zh';
   };
@@ -276,8 +276,8 @@
       </article>
       <aside id="sidebar" role="navigation">
   <div class="inner">
-    <strong class="sidebar-title">欢迎</strong><a href="/categories" class="sidebar-link">欢迎</a><strong class="sidebar-title">学习笔记</strong><a href="/2014/01/07/learn-python/" class="sidebar-link">Python笔记</a><strong class="sidebar-title">工具使用</strong><a href="/2013/05/05/learn-git/" class="sidebar-link">Git学习笔记</a><a href="/2013/08/07/cmake-usage/" class="sidebar-link current">CMAKE使用</a><a href="/2013/07/03/google-repo/" class="sidebar-link">Google Repo</a>
-    <strong class="sidebar-title">PYTHON</strong><a href="/2014/01/07/learn-python/" class="sidebar-link">Python笔记</a><strong class="sidebar-title">GIT</strong><a href="/2013/05/05/learn-git/" class="sidebar-link">Git学习笔记</a><strong class="sidebar-title">CMAKE</strong><a href="/2013/08/07/cmake-usage/" class="sidebar-link current">CMAKE使用</a><strong class="sidebar-title">REPO</strong><a href="/2013/07/03/google-repo/" class="sidebar-link">Google Repo</a>
+    <strong class="sidebar-title">欢迎</strong><a href="/categories" class="sidebar-link">欢迎</a><strong class="sidebar-title">工具使用</strong><a href="/2013/05/05/learn-git/" class="sidebar-link">Git学习笔记</a><a href="/2013/07/03/google-repo/" class="sidebar-link">repo工具学习笔记</a><a href="/2013/08/07/cmake-usage/" class="sidebar-link current">cmake学习笔记</a><a href="/20134/02/03/repo-source/" class="sidebar-link">repo实现学习笔记</a><strong class="sidebar-title">学习笔记</strong><a href="/2014/01/07/learn-python/" class="sidebar-link">Python学习笔记</a>
+    <strong class="sidebar-title">GIT</strong><a href="/2013/05/05/learn-git/" class="sidebar-link">Git学习笔记</a><strong class="sidebar-title">PYTHON</strong><a href="/2014/01/07/learn-python/" class="sidebar-link">Python学习笔记</a><strong class="sidebar-title">REPO</strong><a href="/2013/07/03/google-repo/" class="sidebar-link">repo工具学习笔记</a><a href="/20134/02/03/repo-source/" class="sidebar-link">repo实现学习笔记</a><strong class="sidebar-title">CMAKE</strong><a href="/2013/08/07/cmake-usage/" class="sidebar-link current">cmake学习笔记</a>
  </div>
 </aside>
 
@@ -311,8 +311,8 @@
       </li>
     </ul>
     
-      <strong class="mobile-nav-title">欢迎</strong><a href="/categories" class="mobile-nav-link">欢迎</a><strong class="mobile-nav-title">学习笔记</strong><a href="/2014/01/07/learn-python/" class="mobile-nav-link">Python笔记</a><strong class="mobile-nav-title">工具使用</strong><a href="/2013/05/05/learn-git/" class="mobile-nav-link">Git学习笔记</a><a href="/2013/08/07/cmake-usage/" class="mobile-nav-link current">CMAKE使用</a><a href="/2013/07/03/google-repo/" class="mobile-nav-link">Google Repo</a>
-      <strong class="mobile-nav-title">PYTHON</strong><a href="/2014/01/07/learn-python/" class="mobile-nav-link">Python笔记</a><strong class="mobile-nav-title">GIT</strong><a href="/2013/05/05/learn-git/" class="mobile-nav-link">Git学习笔记</a><strong class="mobile-nav-title">CMAKE</strong><a href="/2013/08/07/cmake-usage/" class="mobile-nav-link current">CMAKE使用</a><strong class="mobile-nav-title">REPO</strong><a href="/2013/07/03/google-repo/" class="mobile-nav-link">Google Repo</a>
+      <strong class="mobile-nav-title">欢迎</strong><a href="/categories" class="mobile-nav-link">欢迎</a><strong class="mobile-nav-title">工具使用</strong><a href="/2013/05/05/learn-git/" class="mobile-nav-link">Git学习笔记</a><a href="/2013/07/03/google-repo/" class="mobile-nav-link">repo工具学习笔记</a><a href="/2013/08/07/cmake-usage/" class="mobile-nav-link current">cmake学习笔记</a><a href="/20134/02/03/repo-source/" class="mobile-nav-link">repo实现学习笔记</a><strong class="mobile-nav-title">学习笔记</strong><a href="/2014/01/07/learn-python/" class="mobile-nav-link">Python学习笔记</a>
+      <strong class="mobile-nav-title">GIT</strong><a href="/2013/05/05/learn-git/" class="mobile-nav-link">Git学习笔记</a><strong class="mobile-nav-title">PYTHON</strong><a href="/2014/01/07/learn-python/" class="mobile-nav-link">Python学习笔记</a><strong class="mobile-nav-title">REPO</strong><a href="/2013/07/03/google-repo/" class="mobile-nav-link">repo工具学习笔记</a><a href="/20134/02/03/repo-source/" class="mobile-nav-link">repo实现学习笔记</a><strong class="mobile-nav-title">CMAKE</strong><a href="/2013/08/07/cmake-usage/" class="mobile-nav-link current">cmake学习笔记</a>
     
   </div>
   <div id="mobile-lang-select-wrap">
