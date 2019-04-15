@@ -119,11 +119,12 @@
 </ul>
 <p>这里我同时采用了上面的三种方法，第一种和第二种分别使用hexo-generator-baidu-sitemap，hexo-baidu-url-submit插件即可实现。但如果数据放在github上，这两种效果也很有限。所以我同时提供一份让百度爬虫可以爬的数据。这种方法网上也有很多思路，大部分是放一份数据在coding page上，然后国内和国外线路分开解析。或者干崔放弃github，直接使用coding page。也有自建站的。</p>
 <h2 id="域名解析路径" class="article-heading"><a href="#域名解析路径" class="headerlink" title="域名解析路径"></a>域名解析路径<a class="article-anchor" href="#域名解析路径" aria-hidden="true"></a></h2><p>以上的几种方法我都试了，下面一一说明，再做一个比较。</p>
-<p>直接使用coding page可以，但由于先入为主的理念，我没有放弃github，任然想把主要访问路径放在github上。所以就想到只把百度的解析线路设置为coding page。几乎所有的域名服务商都提供安搜索线路解析的功能。但问题是coding page要支持https会自动向let’s encrypt申请证书，但申请证书需要验证域名。如果将域名主解析指向github，这一步就验证不通过。无法开通https。除非手动修改域名，先暂时性将解析路径修改到coding page，等拿到证书再修改解析路径即可。但做为一个程序员，如此憋屈的办法实在不敢采用。</p>
+<p>直接将博客部署在coding page，可直接实现https，证书coding page会自动生成。无需其它处理。目前coding已经被腾讯收购，coding page好像使用的是腾讯云，速度还可以。</p>
+<p>但个人还是希望主解析路径还是使用github，只把百度的解析线路设置为coding page。几乎所有的域名服务商都提供安搜索线路解析的功能。但问题是coding page要支持https会自动向let’s encrypt申请证书，但申请证书需要验证域名。如果将域名主解析指向github，这一步就验证不通过。无法开通https。除非手动修改域名，先暂时性将解析路径修改到coding page，等拿到证书再修改解析路径即可。但做为一个程序员，如此憋屈的办法实在不敢采用。</p>
 
               </div>
               <footer class="article-footer">
-                <time class="article-footer-updated" datetime="2019-04-15T13:53:13.238Z" itemprop="dateModified">上次更新：2019-04-15</time>
+                <time class="article-footer-updated" datetime="2019-04-15T14:12:10.255Z" itemprop="dateModified">上次更新：2019-04-15</time>
                 <a href="/2013/05/05/learn-git/" class="article-footer-prev" title="Git学习笔记"><i class="fa fa-chevron-left"></i><span>上一页</span></a><a href="/2014/01/07/learn-python/" class="article-footer-next" title="Python学习笔记"><span>下一页</span><i class="fa fa-chevron-right"></i></a>
               </footer>
               
