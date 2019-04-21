@@ -119,12 +119,14 @@
 </ul>
 <p>这里我同时采用了上面的三种方法，第一种和第二种分别使用hexo-generator-baidu-sitemap，hexo-baidu-url-submit插件即可实现。但如果数据放在github上，这两种效果也很有限。所以我同时提供一份让百度爬虫可以爬的数据。这种方法网上也有很多思路，大部分是放一份数据在coding page上，然后国内和国外线路分开解析。或者干崔放弃github，直接使用coding page。也有自建站的。</p>
 <h2 id="域名解析路径" class="article-heading"><a href="#域名解析路径" class="headerlink" title="域名解析路径"></a>域名解析路径<a class="article-anchor" href="#域名解析路径" aria-hidden="true"></a></h2><p>以上的几种方法我都试了，下面一一说明，再做一个比较。</p>
-<p>直接将博客部署在coding page，可直接实现https，证书coding page会自动生成。无需其它处理。目前coding已经被腾讯收购，coding page好像使用的是腾讯云，速度还可以。</p>
-<p>但个人还是希望主解析路径还是使用github，只把百度的解析线路设置为coding page。几乎所有的域名服务商都提供安搜索线路解析的功能。但问题是coding page要支持https会自动向let’s encrypt申请证书，但申请证书需要验证域名。如果将域名主解析指向github，这一步就验证不通过。无法开通https。除非手动修改域名，先暂时性将解析路径修改到coding page，等拿到证书再修改解析路径即可。但做为一个程序员，如此憋屈的办法实在不敢采用。</p>
+<p>直接将博客部署在coding page，可直接实现https，证书coding page会自动生成。无需其它处理。目前coding已经被腾讯收购，coding page使用的是腾讯云，速度还可以。</p>
+<p>但个人还是希望主解析路径还是使用github，只把百度的解析线路设置为coding page。几乎所有的域名服务商都提供安搜索线路解析的功能。但问题是coding page要支持https会自动向let’s encrypt申请证书，但申请证书需要验证域名。如果将域名主解析指向github，这一步就验证不通过，无法开通https。除非手动修改域名，先暂时性将解析路径修改到coding page，等拿到证书再修改解析路径即可。但做为一个程序员，如此憋屈的办法实在是不敢恭维。</p>
+<p>然后想到使用自己的AWS EC2主机，该主机本身已经部署了ss的socket5代理和IPSec/IKEv2 vpn，想着在该主机上使用ngnix部署一份web页面供百度使用。自动申请let’s encrypt证书以支持https。然而细想下来，实现和使用coding pages没有什么区别。因为申请let’s encrypt证书时仍然要验证，如果主解析指向github，仍然无法申请到证书。</p>
+<h2 id="certbot工具插件开发" class="article-heading"><a href="#certbot工具插件开发" class="headerlink" title="certbot工具插件开发"></a>certbot工具插件开发<a class="article-anchor" href="#certbot工具插件开发" aria-hidden="true"></a></h2><p>最后想到的办法是，使用certbot工具插件。因为certbot在申请证书时可以指定dns-1验证，这样便可不管解析指向来申请证书了。但dns域名验证插件并不支持所有域名服务商，如果没有对应的插件就得自己写插件了。而我用的aliyun（万网）正好不支持。所以只能自己写插件了。</p>
 
               </div>
               <footer class="article-footer">
-                <time class="article-footer-updated" datetime="2019-04-15T14:12:10.255Z" itemprop="dateModified">上次更新：2019-04-15</time>
+                <time class="article-footer-updated" datetime="2019-04-21T04:11:52.117Z" itemprop="dateModified">上次更新：2019-04-21</time>
                 <a href="/2013/05/05/learn-git/" class="article-footer-prev" title="Git学习笔记"><i class="fa fa-chevron-left"></i><span>上一页</span></a><a href="/2014/01/07/learn-python/" class="article-footer-next" title="Python学习笔记"><span>下一页</span><i class="fa fa-chevron-right"></i></a>
               </footer>
               
@@ -150,7 +152,7 @@
           <aside id="article-toc" role="navigation">
             <div id="article-toc-inner">
               <strong class="sidebar-title">目录</strong>
-              <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#为什么要使用https"><span class="toc-text">为什么要使用https</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#如何让百度收录"><span class="toc-text">如何让百度收录</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#域名解析路径"><span class="toc-text">域名解析路径</span></a></li></ol>
+              <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#为什么要使用https"><span class="toc-text">为什么要使用https</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#如何让百度收录"><span class="toc-text">如何让百度收录</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#域名解析路径"><span class="toc-text">域名解析路径</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#certbot工具插件开发"><span class="toc-text">certbot工具插件开发</span></a></li></ol>
               <a href="#" id="article-toc-top">回到顶部</a>
             </div>
           </aside>
